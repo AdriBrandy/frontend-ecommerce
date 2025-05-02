@@ -2,8 +2,9 @@ import React from "react";
 import ProductCard from "./ProductCard";
 import ProductDescription from "./ProductDescription";
 
-import { getProducts, getOffers } from "https://skillboost-academy.onrender.com";
+import { getProducts, getOffers } from "../../../api/productsApi";
 import { useEffect, useState } from "react";
+
 
 const Products = () => {
   const [products, setProducts] = useState([]);

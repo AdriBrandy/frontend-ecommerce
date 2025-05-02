@@ -1,24 +1,15 @@
 import axios from "axios";
-
-const API_URL = "http://localhost:5000/api/products"; // Cambiá esto si usás otro puerto
+// src/api/productsApi.js
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 export const getProducts = async () => {
-  try {
-    const response = await axios.get(API_URL);
-    return response.data;
-  } catch (error) {
-    console.error("Error al traer productos:", error);
-    return [];
-  }
+  const res = await fetch(`${BASE_URL}/api/products`);
+  const data = await res.json();
+  return data;
 };
 
 export const getOffers = async () => {
-    try {
-      const response = await axios.get("http://localhost:5000/api/products/offers");
-      return response.data;
-    } catch (error) {
-      console.error("Error al traer ofertas:", error);
-      return [];
-    }
-  };
-  
+  const res = await fetch(`${BASE_URL}/api/products/offers`);
+  const data = await res.json();
+  return data;
+};
