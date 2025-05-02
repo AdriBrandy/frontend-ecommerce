@@ -33,7 +33,7 @@ const Register = () => {
   
     try {
       const response = await axios.post(
-        "https://skillboost-academy.onrender.com",
+        "https://skillboost-academy.onrender.com/api/users/register",
         userData
       );
   
