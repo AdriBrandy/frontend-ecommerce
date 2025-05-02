@@ -1,4 +1,3 @@
-import axios from "axios";
 // src/api/productsApi.js
 const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 

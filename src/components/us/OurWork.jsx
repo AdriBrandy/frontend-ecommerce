@@ -1,8 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const OurWork = () => {
+  const navigate = useNavigate();
   return (
-    <section id="why" className="min-h-screen overflow-hidden bg-white py-2 m-7 sm:py-16">
+    <section
+      id="why"
+      className="min-h-screen overflow-hidden bg-white py-2 m-7 sm:py-16"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pr-8 lg:pt-4">
@@ -17,7 +22,6 @@ const OurWork = () => {
                 Cursos diseñados para acelerar tu carrera en tiempo récord.
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
-                
                 <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                   <div className="relative pl-9">
                     <dt className="inline font-semibold text-gray-900">
@@ -87,22 +91,24 @@ const OurWork = () => {
               </dl>
             </div>
             <div className="mt-10 flex items-center gap-x-6">
-              <a
-                href="/courses"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              <button
+                onClick={() => navigate("/courses")}
+                className=" bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-lg transition"
               >
-                Ver cursos
-              </a>
-              <a
-                href="#testimony"
-                className="text-sm font-semibold leading-6 text-gray-700"
-              >
-                Testimonios
-                <span aria-hidden="true">→</span>
-              </a>
+                {" "}
+                Ver Cursos
+              </button>
+              <div>
+                <a
+                  href="#testimony"
+                  className="text-sm font-semibold leading-6 text-gray-700"
+                >
+                  Testimonios
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
             </div>
           </div>
-
           {/* Imagen que se mueve en pantallas pequeñas */}
           <img
             src="https://i.pinimg.com/1200x/69/0a/ba/690abacb92f2f1f92048539f17976e58.jpg"

@@ -32,7 +32,7 @@ export default function Checkout() {
   };
 
   return (
-    <div className="min-h-screen container mx-auto px-4 py-8">
+    <div className="min-h-screen container mx-auto px-4 py-8 scroll-mt-auto">
       <h1 className="text-3xl font-bold mb-6 text-center">Resumen de Compra</h1>
 
       {cart.length === 0 ? (

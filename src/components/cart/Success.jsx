@@ -7,7 +7,7 @@ export default function Success() {
   
     if (!state) {
       return (
-        <div className="min-h-screen flex flex-col justify-center items-center">
+        <div className="min-h-screen flex flex-col justify-center items-center scroll-mt-auto">
           <p className="text-red-500">No hay datos de compra disponibles.</p>
           <button
             onClick={() => navigate("/")}
