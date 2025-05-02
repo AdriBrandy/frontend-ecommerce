@@ -2,7 +2,7 @@ import React from "react";
 import ProductCard from "./ProductCard";
 import ProductDescription from "./ProductDescription";
 
-import { getProducts, getOffers } from "https://skillboost-academy.onrender.com/api/products";
+import { getProducts, getOffers } from "https://skillboost-academy.onrender.com";
 import { useEffect, useState } from "react";
 
 const Products = () => {
